@@ -5,8 +5,20 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<style>
+		.stream {
+			
+			margin-top: 1%;
+			position: relative;
+		}
+
+		.streamtext {
+			margin: auto;
+			width: 50%;
+		}
+	</style>
 	<head>
-		<title>Left Sidebar - Arcana by HTML5 UP</title>
+		<title>Twitch - Arcana by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,7 +55,7 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
-								<li class="current"><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li class="current"><a href="streams.html">Twitch</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
 								<li><a href="no-sidebar.html">No Sidebar</a></li>
@@ -62,34 +74,68 @@
 									<!-- Sidebar -->
 
 										<section>
-											<h3>Just a Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-											<footer>
-												<a href="#" class="button">Continue Reading</a>
-											</footer>
+											<h3>Who's Live Right Now?</h3>
+											<p></p>
+											<div class ="stream">
+													<h3 class="streamtext">
+														Khayame
+													</h3>
+												<a href="streams.html?stream=isthathymn">
+												<img src =https://static-cdn.jtvnw.net/previews-ttv/live_user_isthathymn-384x216.jpg>
+											</a>
+											<div class ="stream">
+													<h3 class="streamtext">
+														Mark
+													</h3>
+												<a href="streams.html?stream=riceplzz">
+												<img src =https://static-cdn.jtvnw.net/previews-ttv/live_user_riceplzz-384x216.jpg>
+											</a>
+											<div class ="stream">
+													<h3 class="streamtext">
+														Fork
+													</h3>
+												<a href="streams.html?stream=forkheals">
+												<img src =https://static-cdn.jtvnw.net/previews-ttv/live_user_forkheals-384x216.jpg>
+											</a>
+											<div class ="stream">
+													<h3 class="streamtext">
+														Ghasper
+													</h3>
+											<a href="streams.html?stream=thelooon">
+											<img src =https://static-cdn.jtvnw.net/previews-ttv/live_user_thelooon-384x216.jpg>
+											</a>
+											<div class ="stream">
+													<h3 class="streamtext">
+														Sisu
+													</h3>
+												<a href="streams.html?stream=thatguysisu">
+												<img src ="https://static-cdn.jtvnw.net/previews-ttv/live_user_thatguysisu-384x216.jpg">
+												</a>
+											</div>
 										</section>
-
-										<section>
-											<h3>Another Subheading</h3>
-											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
-											<footer>
-												<a href="#" class="button">More Random Links</a>
-											</footer>
-										</section>
-
 								</div>
 							</div>
 							<div class="col-8  col-12-narrower imp-narrower">
 								<div id="content">
+									<!-- Add a placeholder for the Twitch embed -->
+									<div id="twitch-embed"></div>
+								
+									<!-- Load the Twitch embed JavaScript file -->
+									<script src="https://embed.twitch.tv/embed/v1.js"></script>
+								
+									<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+									<script type="text/javascript">
+									  var url_string = window.location.href;
+									  var url = new URL(url_string);
+									  var currentStream = url.searchParams.get("stream");
+									  new Twitch.Embed("twitch-embed", {
+										width: 960,
+										height: 540,
+										channel: currentStream,
+										// Only needed if this page is going to be embedded on other websites
+										parent: ["griffv.github.io"]
+									  });
+									</script>
 
 									<!-- Content -->
 
@@ -98,8 +144,6 @@
 												<h2>Left Sidebar</h2>
 												<p>Sidebar on the left, content on the right.</p>
 											</header>
-
-											<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
 
 											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -123,7 +167,6 @@
 											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
 											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
 										</article>
-
 								</div>
 							</div>
 						</div>

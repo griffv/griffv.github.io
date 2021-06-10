@@ -7,6 +7,18 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+	--mainbg: rgb(0, 11, 29);
+	--maintext: #c7c7c7;
+	--headerbg: black;
+	--headertext: black; /* unused */
+	--footerbg: rgb(26, 26, 26);
+	--footertext: #c7c7c7;
+	--highlightblue: #37c0fb;
+}
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -98,7 +110,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #474747;
+		color: var(--maintext);
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -2531,11 +2543,11 @@ input, select, textarea {
 
 	#header {
 		text-align: center;
-		padding: 3em 0 0 0;
-		background-color: #fff;
-		background-image: url("images/bg02.png"), url("images/bg02.png"), url("images/bg01.png");
-		background-position: top left,					top left,					top left;
-		background-size: 100% 6em,					100% 6em,					auto;
+		padding: 4em 0 0 0;
+		background-color: var(--headerbg);
+		background-image: url("../../images/banner2.jpg");
+		background-position: top,					top,					center;
+		background-size: 45%,					100% 6em,					auto;
 		background-repeat: no-repeat,					no-repeat,					repeat;
 	}
 
@@ -2545,7 +2557,7 @@ input, select, textarea {
 		}
 
 			#header h1 a {
-				font-size: 1.5em;
+				font-size: 4em;
 				letter-spacing: -0.025em;
 				border: 0;
 			}
@@ -2724,11 +2736,11 @@ input, select, textarea {
 	}
 
 		.wrapper.style1 {
-			background: #fff;
+			background: var(--mainbg);
 		}
 
 		.wrapper.style2 {
-			background-color: #fff;
+			background-color: var(--mainbg);
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
 			background-position: top left,						bottom left,					top left;
 			background-size: 100% 6em,						100% 6em,						auto;
@@ -2736,7 +2748,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #37c0fb;
+			background-color: var(--mainbg);
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2775,10 +2787,11 @@ input, select, textarea {
 
 	#footer {
 		padding: 4em 0 8em 0;
+		background-color: var(--footerbg);
 	}
 
 		#footer a {
-			color: inherit;
+			color: var(--footertext);
 			border-bottom-color: rgba(71, 71, 71, 0.25);
 		}
 

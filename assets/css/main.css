@@ -2684,6 +2684,42 @@ input, select, textarea {
 		}
 
 /* Banner */
+	
+	#applicationbanner {
+		background-image: url("../../images/application/applicationbanner.jpg");
+		background-position: center center;
+		background-size: cover;
+		height: 28em;
+		text-align: center;
+		position: relative;
+	}
+		#applicationbanner header h2 {
+			display: block;
+			margin: 0;
+			color:rgb(199, 199, 199);
+			text-shadow: black;
+			background-color: rgba(0, 0, 0, 0.651);
+			font-size: 2.5em;
+		}
+
+			#applicationbanner header h2 em {	
+				opacity: 0.75;
+			}
+
+			#applicationbanner header h2 a {
+				border-bottom-color: rgba(255, 255, 255, 0.5);
+			}
+
+				#applicationbanner header h2 a:hover {
+					border-bottom-color: transparent;
+				}
+
+			#applicationbanner header .button {
+				vertical-align: bottom;
+				margin-top: 20em;
+		}
+
+
 
 	#banner {
 		background-image: url("../../images/banner.jpg");

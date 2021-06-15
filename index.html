@@ -34,7 +34,7 @@
 										<li><a href="https://www.warcraftlogs.com/guild/id/278888">Warcraftlogs</a></li>
 										<li><a href="https://www.wowprogress.com/guild/us/tichondrius/Snowblind">Wowprogress</a></li>
 										<li><a href="https://www.youtube.com/user/DontHateEviscerate">Progchamps</a></li>
-										<li><a href="https://goo.gl/forms/fBwoNhYraLjWUu7w1">Applications</a></li>
+										<li><a href="application.html">Applications</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -46,7 +46,7 @@
 				<section id="banner">
 					<header>
 						<h2>Snowblind: <em>A two day raiding guild on Tichondrius.</em></h2>
-						<a href="https://goo.gl/forms/fBwoNhYraLjWUu7w1" class="button">Accepting Applications</a>
+						<a href="application.html" class="button">Apply Today</a>
 					</header>
 				</section>
 
@@ -68,10 +68,10 @@
 									    <button id="poggersBtn" type="button">
 										POGGERS
 										</button>
-										<form action="https://discord.com/api/webhooks/814152452239654912/pmdbBrtGL-o1hgPg5KbsCPmXsHtIgB68VmEKZZHz7Z9AYq0v92Va905HUYqStcq871SI" method="post">
-										<label for="content">Please add a tasteful message below!:</label><br>
-										<input type="text" id="content" name="content"><br>
-										<input type="submit" value="Submit">
+										<form name="discordpost" action="https://discord.com/api/webhooks/814152452239654912/pmdbBrtGL-o1hgPg5KbsCPmXsHtIgB68VmEKZZHz7Z9AYq0v92Va905HUYqStcq871SI" method="post" onsubmit="event.preventDefault();">
+										<label id="addmsg" for="content">Please add a tasteful message below!:</label><br>
+										<input type="text" id="content" name="content" onkeydown="checkkey()"><br>
+										<input type="button" value="Submit" onclick="validate_text()">
 										</form>
 										<script src='scripts.js'></script>
 								</div>
